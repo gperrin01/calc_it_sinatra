@@ -16,13 +16,13 @@ get '/' do
   end
   erb :home
 end
-
 get '/power' do 
   if @first && @power
     @first = params["first"].to_f
     @power = params["power"].to_i
     @result = @first ** @power 
   end
+  erb :power
 end
 
 get '/sqrt' do 
@@ -30,3 +30,13 @@ get '/sqrt' do
     @first = params["first"].to_f
     @result = Math.sqrt(@first)
   end
+  erb :sqrt
+end
+
+get '/extra_one' do 
+  if @first
+    @first = params["first"].to_f
+    @ result = @first*11
+  end
+  erb :extra_one
+end

@@ -16,27 +16,27 @@ get '/' do
   end
   erb :home
 end
+
 get '/power' do 
-  if @first && @power
-    @first = params["first"].to_f
-    @power = params["power"].to_i
-    @result = @first ** @power 
+  @first_p = params["first_p"]
+  if @first_p && @power
+    @result_p = @first_p.to_f ** @power 
   end
   erb :power
 end
 
 get '/sqrt' do 
-  if @first
-    @first = params["first"].to_f
-    @result = Math.sqrt(@first)
+  @first_sqrt = params["first_sqrt"]
+  if @first_sqrt
+    @result_sqrt = Math.sqrt(@first_sqrt.to_f)
   end
   erb :sqrt
 end
 
-get '/extra_one' do 
-  if @first
-    @first = params["first"].to_f
-    @ result = @first*11
+get '/extra_one' do
+  @first_extra = params["first_extra"] 
+  if @first_extra
+    @result_extra = @first_extra.to_f*11
   end
   erb :extra_one
 end

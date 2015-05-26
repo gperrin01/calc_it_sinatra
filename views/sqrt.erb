@@ -3,14 +3,14 @@
   <p class='greeting'>The Root of the problem</p>
 
   <form actions= "/sqrt" method='get'>
-    <label for='first'>FIRST NUMBER</label>
-    <input type='text' name='first' placeholder='Enter the number'>
+    <label for='first_sqrt'>FIRST NUMBER</label>
+    <input type='text' name='first_sqrt' placeholder='Enter the number'>
     <input type='submit'>
   </form>
 
 
-  <% if @result %>
-  <p class='result'> You guessed it: Square Root of <%= @first %> = <%= @result %> </p>
+  <% if @result_sqrt %>
+  <p class='result'> You guessed it: Square Root of <%= @first %> = <%= @result_sqrt %> </p>
   <% end %>
 
 </div>

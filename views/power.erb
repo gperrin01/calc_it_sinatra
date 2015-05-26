@@ -3,16 +3,16 @@
   <p class='greeting'>I got the Powa</p>
 
   <form actions= "/power" method='get'>
-    <label for='first'>FIRST NUMBER</label>
-    <input type='text' name='first' placeholder='Enter the first number'>
+    <label for='first_p'>FIRST NUMBER</label>
+    <input type='text' name='first_p' placeholder='Enter the first number'>
     <label for='power'>AT THE POWER OF</label>
     <input type='text' name='power' placeholder='Enter power'>
     <input type='submit'>
   </form>
 
 
-  <% if @result %>
-  <p class='result'> You guessed it: <%= @first %> at the power of <%= @power %> = <%= @result %> </p>
+  <% if @result_p %>
+  <p class='result'> You guessed it: <%= @first_p %> at the power of <%= @power %> = <%= @result_p %> </p>
   <% end %>
 
 </div>

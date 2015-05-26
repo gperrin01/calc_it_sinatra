@@ -3,14 +3,14 @@
   <p class='greeting'>At the Eleventh hour</p>
 
   <form actions= "/extra_one" method='get'>
-    <label for='first'>FIRST NUMBER</label>
-    <input type='text' name='first' placeholder='Enter the number'>
+    <label for='first_extra'>FIRST NUMBER</label>
+    <input type='text' name='first_extra' placeholder='Enter the number'>
     <input type='submit'>
   </form>
 
 
-  <% if @result %>
-  <p class='result'> You guessed it: <%= @first %> x 11 = <%= @result %> </p>
+  <% if @result_extra %>
+  <p class='result'> You guessed it: <%= @first_extra %> x 11 = <%= @result_extra %> </p>
   <% end %>
 
 </div>

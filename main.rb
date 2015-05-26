@@ -18,9 +18,10 @@ get '/' do
 end
 
 get '/power' do 
-  @first_p = params["first_p"]
+  @first_p = params["first_p"] 
+  @power = params["power"]
   if @first_p && @power
-    @result_p = @first_p.to_f ** @power 
+    @result_p = @first_p.to_f ** @power.to_i 
   end
   erb :power
 end
@@ -28,7 +29,7 @@ end
 get '/sqrt' do 
   @first_sqrt = params["first_sqrt"]
   if @first_sqrt
-    @result_sqrt = Math.sqrt(@first_sqrt.to_f)
+    @result_sqrt = Math.sqrt(@first_sqrt.to_f).round(2)
   end
   erb :sqrt
 end

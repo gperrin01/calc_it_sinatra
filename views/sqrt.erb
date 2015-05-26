@@ -1,0 +1,16 @@
+<div class='container'>
+
+  <p class='greeting'>The Root of the problem</p>
+
+  <form actions= "/sqrt" method='get'>
+    <label for='first'>FIRST NUMBER</label>
+    <input type='text' name='first' placeholder='Enter the number'>
+    <input type='submit'>
+  </form>
+
+
+  <% if @result %>
+  <p class='result'> You guessed it: <%= @first %> at the power of <%= @power %> = <%= @result %> </p>
+  <% end %>
+
+</div>

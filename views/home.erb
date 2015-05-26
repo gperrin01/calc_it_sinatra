@@ -1,0 +1,21 @@
+<div class='container'>
+
+  <p class='greeting'>Back to Basics</p>
+
+  <form actions= "/" method='get'>
+    <label for='first'>FIRST NUMBER</label>
+    <input type='text' name='first' placeholder='Enter the first number'>
+    <!-- it returns a HASH: key is 'name', value is 'what we submit' -->
+    <label for='operator'>OPERATOR</label>
+    <input type='text' name='operator' placeholder='Enter the operator'>
+    <label for='second'>SECOND NUMBER</label>
+    <input type='text' name='second' placeholder='Enter the second number'>
+    <input type='submit'>
+  </form>
+
+
+  <% if @result %>
+  <p class='result'> You guessed it: <%= @first %> <%= @operator %> <%= @second %> = <%= @result %> </p>
+  <% end %>
+
+</div>

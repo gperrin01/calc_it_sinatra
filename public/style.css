@@ -1,12 +1,21 @@
 body {
   background-color: #FFEFD5;
 }
-h1 {
+.background {
   text-align: center;
 }
+.header {
+  background-image: url('calcscreen.png');
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: center;
+  height: 201px;
+}
+
 nav {
-  text-align: center;
   color: #2F4F4F;
+  position: relative;
+  top: 45px;
 }
 li {
   display: inline;
@@ -15,19 +24,39 @@ li {
 li a {
   text-decoration: none;
   color: #2F4F4F;
+  font-size: 19px;
 }
 .greeting {
-  text-align: center;
+  margin: 0px;
+  position: relative;
+  top: 133px;
+}
+.black {
+  height: 100px;
+  width: 1020px;
+  background-color: black;
+  background-position: center;
+  position: relative;
+  left: 95px;
+}
+.container {
+  background-image: url('calc.jpg');
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: center;
+  height: 600px;
+  position: relative;
+  top: -85px;
 }
 form {
-  text-align: center;
   position: relative;
-  top: 30px;
+  color: white;
+  font-size: 22px;
 }
 .result {
   display: block;
   position: relative;
-  top: 40px;
-  font-size: 18px;
-  text-align: center;
+  top: -187px;
+  font-size: 34px;
+  color: white;
 }

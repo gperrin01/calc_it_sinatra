@@ -3,6 +3,7 @@ require 'sinatra/reloader' if development?
 require 'pry'
 
 get '/' do 
+  @page = "*** Back to Basics ***"
   @first = params["first"].to_f
   @operator = params["operator"]
   @second = params["second"].to_f
@@ -18,6 +19,7 @@ get '/' do
 end
 
 get '/power' do 
+  @page = "*** I got the Powa ***"
   @first_p = params["first_p"] 
   @power = params["power"]
   if @first_p && @power
@@ -27,6 +29,7 @@ get '/power' do
 end
 
 get '/sqrt' do 
+  @page = "*** The Root of the problem ***"
   @first_sqrt = params["first_sqrt"]
   if @first_sqrt
     @result_sqrt = Math.sqrt(@first_sqrt.to_f).round(2)
@@ -35,6 +38,7 @@ get '/sqrt' do
 end
 
 get '/extra_one' do
+  @page = "*** At the Eleventh hour ***"
   @first_extra = params["first_extra"] 
   if @first_extra
     @result_extra = @first_extra.to_f*11
